@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/lemon-milk');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(145deg, #0f0f0f, #1e1e1e);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-size: 18px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 35px 30px;
+  border-radius: 24px;
+  width: max-content;
+  box-shadow: 0 0 30px rgba(125, 95, 255, 0.15);
+  text-align: center;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+h1 {
+  font-family: 'Lemon Milk', sans-serif;
+  font-size: 1.9rem;
+  color: #7d5fff;
+  margin-bottom: 28px;
+  text-shadow: 0 0 10px #7d5fff77;
+  letter-spacing: 1px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #1dd1a1;
+}
+
+#amount {
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  outline: none;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.1);
+}
+
+.currency-box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.currency-select {
+  flex: 1;
+  text-align: left;
+}
+
+.currency-select p {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1dd1a1;
+}
+
+.select-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(80, 110, 236, 0.2);
+  gap: 10px;
+}
+
+.select-wrapper img {
+  width: 44px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+select {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  border: 2px solid #7d5fff;
+  box-shadow: 0 0 12px #7d5fff77;
+  appearance: none;
+  transition: all 0.3s ease;
+}
+
+select:hover {
+  box-shadow: 0 0 14px #7d5fff99;
+}
+
+select:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 14px #ff6b6b88;
+}
+
+/* Exchange Icon */
+.exchange-icon {
+  font-size: 2rem;
+  color: #ff6b6b;
+  text-shadow: 0 0 6px #ff6b6b99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+/* Button */
+#exchangeBtn {
+  margin-top: 15px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #506EEC, #7d5fff);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 16px rgba(125, 95, 255, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#exchangeBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 22px rgba(125, 95, 255, 0.7);
+}
+
+/* Message */
+#msg {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #1dd1a1;
+  text-shadow: 0 0 6px #1dd1a155;
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .currency-box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+}
+/* Scrollbar styling for dropdown */
+select {
+  scrollbar-width: thin;
+  scrollbar-color: #7d5fff rgba(255, 255, 255, 0.1);
+}
+
+select::-webkit-scrollbar {
+  width: 8px;
+}
+
+select::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+select::-webkit-scrollbar-thumb {
+  background-color: #7d5fff;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Better appearance for open state in some browsers */
+select:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.88);
+  color: #ffffff;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 10px #ff6b6b88;
+}
+
+@keyframes flash {
+  0% { background-color: rgba(255, 255, 255, 0.1); }
+  50% { background-color: rgba(255, 255, 255, 0.3); }
+  100% { background-color: rgba(255, 255, 255, 0.1); }
+}
+
+#msg {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#msg.flash {
+  animation: flash 0.6s ease-in-out;
+}
